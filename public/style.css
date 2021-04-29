@@ -1,0 +1,188 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+.page-container {
+  width: 100%;
+  height: 100%;
+}
+
+body,
+input,
+textarea {
+  font-size: 16px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+td.disabled-td {
+  opacity: 0.4;
+  font-weight: bold;
+}
+
+.page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #d6d9e0;
+}
+
+.calendar-container {
+  background: #fff;
+  min-height: 300px;
+  width: 300px;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.calendar-header {
+  display: flex; /* Display flex deixa tu usar o flex-direction, justify-content e o align-items */
+  flex-direction: row; /* Default: Row -> Linha [1] [2] [3]*/
+  justify-content: space-between; /* Center: Alinha horizontalmente no centro | | space-between: um em cada canto*/
+  align-items: center; /* Alinha verticalmente no  centro */
+  width: 100%;
+  height: 32px;
+  margin-bottom: 12px;
+}
+
+.calendar-header > button { /* > -> o BUTTON que é filho direto do .calendar-header || 
+    <div class="calendar-header">
+      <button>a</button> / pega
+      <div>
+        <button>b</button> / n pega
+      </div>
+    </div>
+  */
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, .25);
+  border: 0;
+  border-radius: 6px;
+}
+
+.calendar-content {
+  width: 100%;  
+  height: 100%;  
+}
+
+.calendar-table {
+  width: 100%;
+  height: 80%;
+}
+
+.calendar-table > thead > tr {
+  margin-bottom: 12px;
+}
+
+.calendar-table > * > tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calendar-table > * > tr + tr {
+  margin-top: 12px;
+}
+
+.calendar-table > * > tr > td {
+  display:  flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
+}
+
+.calendar-table > * > tr > td > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+
+  transition: .2s;
+}
+
+.calendar-table > * > tr > td > button:hover {
+  color: #018FFE;
+  box-shadow: 0 0 3px 2px rgba(106, 220, 255, 0.63);
+}
+
+.calendar-table > * > tr > td > button.today {
+  color: #018FFE;
+  box-shadow: 0 0 3px 2px rgba(106, 220, 255, 0.658);
+}
+
+.calendar-table > * > tr > td > button.selected {
+  color: #fff;
+  background: #018FFE;
+}
+
+.reminders-container.hidden {
+  display: none;
+}
+
+.reminders-container {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-height: 80px;
+  /* margin-top: 24px; */
+}
+
+.reminders-container > ul {
+  width: 100%;
+}
+
+.reminders-container > ul > li {
+  width: 80%;
+  margin-left: 25px;
+}
+
+.reminders-container > ul > li > input {
+  border: 0;
+  background: transparent;
+  margin: 24px 0;
+  font-size: 16px;
+  font-weight: 700;
+  opacity: .6;
+}
+
+.reminders-container > footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.reminders-container > footer > button {
+  border: 0;
+  background: transparent;
+  width: 48%;
+  height: 40px;
+  background: #d6d9e0;  
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.reminders-container > footer > button:last-child {
+  color: #fff;
+  background: #018FFE;
+}
+
+
+

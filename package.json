@@ -1,0 +1,14 @@
+{
+  "name": "calendar-planner",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/tsuyusk/calendar-planner",
+  "author": "tsuy <rafaeldesenhos99@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  },
+  "scripts": {
+    "dev": "live-server"
+  }
+}
